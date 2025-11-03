@@ -8,8 +8,8 @@
 }
 
 body {
-  background-color: #f9f9f9;
-  color: #111;
+  background-color: #fafafa;
+  color: #333;
 }
 
 /* ----- HEADER ----- */
@@ -17,22 +17,23 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 18px 40px;
+  background: #fff;
   border-bottom: 1px solid #eee;
-  background-color: #fff;
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
 .logo {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 .navbar nav a {
   margin-left: 24px;
   text-decoration: none;
-  color: #444;
+  color: #666;
   font-weight: 500;
   transition: color 0.3s;
 }
@@ -42,57 +43,88 @@ body {
 }
 
 .navbar nav a.active {
-  font-weight: 700;
+  color: #000;
   border-bottom: 2px solid #000;
   padding-bottom: 4px;
 }
 
-/* ----- HERO SECTION ----- */
+/* ----- HERO ----- */
 .hero {
   text-align: center;
-  padding: 140px 20px;
-  background-color: #fafafa;
+  padding: 100px 20px 80px;
+}
+
+.hero-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: 700;
-  margin-bottom: 20px;
-  line-height: 1.3;
+  margin-bottom: 16px;
+  color: #111;
 }
 
 .hero p {
   font-size: 1.1rem;
   color: #666;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
+  line-height: 1.7;
 }
 
 .btn-primary {
   display: inline-block;
-  background-color: #0071e3;
+  background-color: #ff94b6;
   color: white;
-  padding: 14px 30px;
+  padding: 12px 28px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: all 0.3s;
 }
 
 .btn-primary:hover {
-  background-color: #005bb5;
+  background-color: #ff6f9e;
   transform: translateY(-2px);
 }
 
-/* ----- CONTENT PAGE ----- */
+/* ----- GALLERY ----- */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px 20px 80px;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ----- CONTENT ----- */
 .content {
   max-width: 700px;
-  margin: 120px auto;
+  margin: 100px auto;
   text-align: center;
   padding: 0 20px;
 }
 
 .content h1 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
@@ -100,15 +132,40 @@ body {
   font-size: 1.05rem;
   line-height: 1.8;
   color: #555;
+  margin-bottom: 16px;
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
   margin-bottom: 20px;
+}
+
+/* ----- CONTACT ----- */
+.sns {
+  margin-top: 30px;
+}
+
+.sns a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #ff6f9e;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.sns a:hover {
+  color: #ff4081;
 }
 
 /* ----- FOOTER ----- */
 footer {
   text-align: center;
   padding: 30px;
+  color: #999;
   border-top: 1px solid #eee;
-  color: #888;
-  background: #fff;
   font-size: 0.9rem;
+  background: #fff;
 }
